@@ -1,19 +1,17 @@
-#include "holberton.h"
+#include "alx.h"
 
 /**
- * main - Entry point
- * Return:0
- */
-
+ * main - Prints Holberton
+ * @void: Empty parameter list for main.
+ *
+ * Description: Prints Holberton w/out stdio
+ *
+ * Return: 0 for success
+*/
 int main(void)
 {
-char c[10] = "Holberton";
-int i = 0;
-while (i < 9)
-{
-_putchar(c[i]);
-i++;
-}
-_putchar('\n');
-return (0);
+	_putchar('A');
+	_putchar('L');
+	_putchar('\X');
+	return (0);
 }
