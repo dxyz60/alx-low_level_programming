@@ -1,30 +1,31 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 /**
- * *_strstr - description
- * @haystack: string
- * @needle: pointer
- * Return: pointer
+ * _strstr - loacte a substring.
+ * @haystack: first string.
+ * @needle: second string.
+ * Return: char.
  */
-
-
 char *_strstr(char *haystack, char *needle)
 {
-int i, j;
-
-for (i = 0; haystack[i] > '\0'; i++)
+unsigned int n = 0, i = 0, j, tmpi, checker;
+while (needle[n] != '\0')
+n++;
+while (haystack[i] != '\0')
 {
-	for (j = i; haystack[j] > '\0' && needle[j - i] > '\0'; j++)
-	{
-		if (haystack[j] != needle[j - i])
-		{
-			break;
-		}
-	}
-	if (needle[j - i] == '\0')
-	{
-		return (haystack + i);
-	}
+tmpi = i;
+checker = 0;
+for (j = 0; j < n; j++)
+{
+if (haystack[tmpi] == needle[j])
+{
+tmpi++;
+checker++;
+}
+}
+if (checker == n)
+return (haystack + i);
+i++;
 }
 return (0);
 }
