@@ -1,4 +1,12 @@
-libmain.a: C Static library containing all the functions listed below:
+#ifndef MAIN_H
+#define MAIN_H
+
+/*
+ * File: MAIN.h
+ * Auth: Brennan D Baraban
+ * Desc: Header file containing the prototypes of all functions
+ *       included in the static library libmain.a.
+ */
 
 int _putchar(char c);
 int _islower(int c);
@@ -20,8 +28,5 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-main.h: Header file containing the prototypes of all functions included in libmain.a.
 
-1. Without libraries what have we? We have no past and no future
-
-create_static_lib.sh: Bash script that creates a static library called liball.a from all the .c files in the current directory.
+#endif
