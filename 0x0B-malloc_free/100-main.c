@@ -1,37 +1,22 @@
-#include "holberton.h"
+    #include "main.h"
+    #include <stdio.h>
+    #include <stdlib.h>
 
-/**
- * print_tab - Prints an array of string
- * @tab: The array to print
- *
- * Return: nothing
- */
-void print_tab(char **tab)
-{
-    int i;
-
-    for (i = 0; tab[i] != NULL; ++i)
+    /**
+     * main - check the code for ALX School students.
+     *
+     * Return: Always 0.
+     */
+    int main(int ac, char *av[])
     {
-        printf("%s\n", tab[i]);
-    }
-}
+        char *s;
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: 1 if an error occurred, 0 otherwise
- */
-int main(void)
-{
-    char **tab;
-    printf("test\n");
-    tab = strtow("Holberton School         #cisfun");
-
-    if (tab == NULL)
-    {
-        printf("Failed\n");
-        return (1);
+        s = argstostr(ac, av);
+        if (s == NULL)
+        {
+            return (1);
+        }
+        printf("%s", s);
+        free(s);
+        return (0);
     }
-    print_tab(tab);
-    return (0);
-}
